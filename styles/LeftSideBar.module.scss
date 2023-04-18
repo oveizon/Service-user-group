@@ -3,6 +3,16 @@
   min-height: 100vh;
   background-color: var(--light-blue);
   padding: 10px;
+
+  hr {
+    margin-top: 6rem;
+  }
+
+  > p {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+  }
 }
 
 .active {

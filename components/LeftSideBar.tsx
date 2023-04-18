@@ -47,6 +47,10 @@ const LeftSideBar = () => {
         <img src="/logo.png" alt="logo" />
       </div>
 
+      <hr />
+
+      <p>Hello User</p>
+
       <div className={styles.nav_items}>
         <ul>
           {list.map((list) => {
@@ -59,6 +63,8 @@ const LeftSideBar = () => {
           })}
         </ul>
       </div>
+
+      <hr />
 
       <div className={styles.nav_items}>
         <ul>

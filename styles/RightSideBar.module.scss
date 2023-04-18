@@ -20,6 +20,11 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   div:not(:last-child) {
