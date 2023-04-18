@@ -28,17 +28,11 @@
 }
 
 .image {
-  position: relative;
-  width: 100%;
-  background-image: linear-gradient(to top, #f1efe9, transparent);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  width: 300px;
+  height: 300px;
 
   img {
     width: 100%;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // // z-index: -1;
   }
 }
 

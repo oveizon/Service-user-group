@@ -1,0 +1,124 @@
+.home {
+  display: grid;
+  grid-template-columns: auto 300px;
+  column-gap: 2rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 315px;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: var(--light-bg-blue);
+  border-radius: var(--border-radius);
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  gap: 2rem;
+  > div {
+    height: 160px;
+    max-height: 160px;
+    background-color: var(--primary-white);
+    border-radius: var(--border-radius);
+  }
+
+  > div:first-child {
+    background-color: var(--dark-blue);
+    color: var(--primary-white);
+    display: grid;
+    place-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    > p {
+      margin-right: auto;
+      margin-left: 1.7rem;
+      font-weight: 500;
+      font-size: 1.7rem;
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        object-fit: contain;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  > div:nth-child(2) {
+    padding: 3rem 2rem 0 2rem;
+
+    div:first-child {
+      margin-bottom: 15px;
+    }
+
+    p:first-child {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  > div:last-child {
+    padding-left: 20px;
+    padding-top: 25px;
+    text-align: center;
+
+    > img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    > p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.activity {
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    a {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
+
+.activities {
+  background-color: var(--light-bg-blue);
+  padding: 10px 0;
+  height: 100%;
+
+  > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    > div {
+      margin-left: 10px;
+    }
+  }
+}

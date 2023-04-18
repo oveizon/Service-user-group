@@ -52,7 +52,7 @@ const RightSideBar = () => {
       {/* ================================================== */}
       <div className={styles.image}>
         {" "}
-        <img src="/farmer.svg" alt="farmer"></img>{" "}
+        <img src="/farmer1.png" alt="farmer"></img>{" "}
       </div>
       {/* ================================================== */}
       {articles.map((article) => {

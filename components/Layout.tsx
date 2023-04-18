@@ -56,10 +56,10 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.container}>
       {/* insert Menu here */}
-      {/* <Menu /> */}
+
       <LeftSideBar />
       {children}
-      <RightSideBar />
+      {/* <RightSideBar /> */}
     </div>
   );
 }
