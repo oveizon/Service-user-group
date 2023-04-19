@@ -1,13 +1,53 @@
 import React from "react";
+import styles from "@/styles/Services.module.scss";
+
+interface Requests {
+  [key: string]: string;
+}
 
 const Services = () => {
+  const requests: Requests[] = [
+    {
+      name: "Farm A",
+      service: "plowing",
+      date: "2021-04-20",
+      location: "accra, ghana",
+      status: "Pending",
+    },
+    {
+      name: "Farm A",
+      service: "plowing",
+      date: "2021-04-20",
+      location: "accra, ghana",
+      status: "Pending",
+    },
+    {
+      name: "Farm A",
+      service: "plowing",
+      date: "2021-04-20",
+      location: "accra, ghana",
+      status: "Pending",
+    },
+    {
+      name: "Farm A",
+      service: "plowing",
+      date: "2021-04-20",
+      location: "accra, ghana",
+      status: "Pending",
+    },
+  ];
+
   return (
-    <div>
-      <nav>
+    <div className={styles.services}>
+      <nav className={styles.navbar}>
         <a href="#">
           <img src="/previous.png" alt="go back" />
         </a>
         <div>
+          <a href="#">
+            {" "}
+            <img src="/question.png" alt="chat" />{" "}
+          </a>
           <a href="#">
             {" "}
             <img src="/chat.png" alt="chat" />{" "}
@@ -18,13 +58,13 @@ const Services = () => {
           </a>
           <a href="#">
             {" "}
-            <img src="/account.png" alt="account" />
+            <img src="/menu.png" alt="account" />
           </a>
         </div>
       </nav>
 
-      <div>
-        <div>
+      <div className={styles.requests}>
+        <div className={styles.links}>
           <a href="#">Active Request(20)</a>
           <a href="#">Purchase Order</a>
           <a href="#">Service Rendered</a>
@@ -32,7 +72,7 @@ const Services = () => {
         </div>
         <h2>Recent Service Request</h2>
 
-        <div>
+        <div className={styles.headers}>
           <div>
             <p>NAME</p>
             <p>SERVICE TYPE</p>
@@ -42,11 +82,23 @@ const Services = () => {
           </div>
 
           <div>
-            <p>Farm A</p>
-            <p>Pending</p>
-            <p>2023-03-10</p>
-            <p>Accra, Ghana</p>
-            <p>Pending</p>
+            {requests.map((request) => {
+              return (
+                <>
+                  <div>
+                    <p>{request.name}</p>
+                    <p>{request.service}</p>
+                    <p>{request.date}</p>
+                    <p>{request.location}</p>
+                    <p>
+                      {request.status}{" "}
+                      <img src="/arrow-down.png" alt="down arrow" />{" "}
+                    </p>
+                  </div>
+                  <hr />
+                </>
+              );
+            })}
           </div>
         </div>
       </div>

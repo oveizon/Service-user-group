@@ -49,6 +49,11 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.details}>
+        <div className={styles.navbar}>
+          <a href="#">
+            <img src="/previous.png" alt="go back" />
+          </a>
+        </div>
         <div className={styles.service}>
           <h2>Service Summary</h2>
           <div className={styles.grid}>

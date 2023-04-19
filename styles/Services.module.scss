@@ -1,0 +1,62 @@
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  margin: 10px 0;
+  padding: 15px 10px 15px 0;
+  place-items: center;
+}
+
+// ==================
+.services {
+  padding-right: 2rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+
+  > div {
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.requests {
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.headers {
+  > div:first-child {
+    @include grid;
+    background-color: var(--secondary-bg-orange);
+    color: var(--primary-white);
+  }
+
+  > div:last-child {
+    div {
+      @include grid;
+
+      p:last-child {
+        img {
+          width: 15px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
