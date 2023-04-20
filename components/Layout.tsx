@@ -9,11 +9,9 @@ type LayoutProps = { children?: ReactNode };
 export default function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.container}>
-      {/* insert Menu here */}
-      <Modal />
+      {/* <Modal /> */}
       <LeftSideBar />
       {children}
-      {/* <RightSideBar /> */}
     </div>
   );
 }
