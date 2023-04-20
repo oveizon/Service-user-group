@@ -12,30 +12,35 @@ const Home = () => {
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
+      id : '1' ,
     },
     {
       src: "/avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
+      id : '2' ,
     },
     {
       src: "/user-icon-avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
+      id : '3' ,
     },
     {
       src: "/avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
+      id : '4' ,
     },
     {
       src: "/user-icon-avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
+      id : '5' ,
     },
 
     {
@@ -43,6 +48,7 @@ const Home = () => {
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
+      id : '6' ,
     },
   ];
 
@@ -103,7 +109,7 @@ const Home = () => {
           <div className={styles.activities}>
             {activities.map((activity) => {
               return (
-                <div>
+                <div key={activity.id}>
                   <img src={activity.src} alt={activity.alt} />
                   <div>
                     <p>{activity.activity}</p>
