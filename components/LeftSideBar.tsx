@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/LeftSideBar.module.scss";
 import { useRouter } from "next/router";
-import { link } from "fs";
+
 
 interface List {
   src: string;
@@ -18,7 +18,7 @@ const LeftSideBar = () => {
       alt: "overview",
       title: "Overview",
       value: "",
-      path: "/home",
+      path: "/",
     },
     {
       src: "/service-request-icon.png",
@@ -39,14 +39,14 @@ const LeftSideBar = () => {
       alt: "certificate",
       title: "Certificate",
       value: "",
-      path: "/",
+      path: "/certificate",
     },
     {
       src: "/review-icon.png",
       alt: "review",
       title: "Review",
       value: "",
-      path: "/",
+      path: "/review",
     },
   ];
 

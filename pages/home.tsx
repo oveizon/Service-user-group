@@ -5,42 +5,42 @@ import styles from "@/styles/Home.module.scss";
 interface Activities {
   [key: string]: string;
 }
-const Home = () => {
+const Overview = () => {
   const activities: Activities[] = [
     {
       src: "/avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
-      id : '1' ,
+      id: "1",
     },
     {
       src: "/avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
-      id : '2' ,
+      id: "2",
     },
     {
       src: "/user-icon-avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
-      id : '3' ,
+      id: "3",
     },
     {
       src: "/avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
-      id : '4' ,
+      id: "4",
     },
     {
       src: "/user-icon-avatar.png",
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
-      id : '5' ,
+      id: "5",
     },
 
     {
@@ -48,7 +48,7 @@ const Home = () => {
       alt: "user avatar",
       activity: "New service request from Farm X for Plowing service",
       timestamp: "10 min ago",
-      id : '6' ,
+      id: "6",
     },
   ];
 
@@ -127,4 +127,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Overview;
