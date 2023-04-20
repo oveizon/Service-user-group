@@ -1,0 +1,53 @@
+ @mixin flexlayout() {
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
+
+ }
+
+ .spreadmain{
+    @include flexlayout();
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    .h1{
+        font-weight: bold;
+    }
+ }
+
+ .spreadmini{
+    @include flexlayout();
+
+    p{
+        padding:0.6rem
+    }
+ }
+
+ .spread{
+    @include flexlayout();
+    p{
+        padding:0.6rem
+    };
+    font-size:medium;
+ }
+
+ .name{
+    color: var(--dark-blue);
+    font-weight: bold;
+ }
+
+ .highlight{
+    background-color: var(--secondary-bg-orange);
+    color: var(--primary-white);
+ }
+
+ .boderline{
+    border-width: 20px;
+    box-shadow: 0 3px 10px var(--light-blue);
+    
+ }
+
+ .up{
+    margin-bottom: 10rem;
+ }
+

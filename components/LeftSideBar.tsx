@@ -32,7 +32,7 @@ const LeftSideBar = () => {
       alt: "invoice",
       title: "Invoice",
       value: "",
-      path: "/",
+      path: "/invoice",
     },
     {
       src: "/certificate-icon.png",

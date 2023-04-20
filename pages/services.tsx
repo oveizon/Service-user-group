@@ -13,6 +13,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
+      id : '1' ,
     },
     {
       name: "Farm A",
@@ -20,6 +21,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
+      id : '2' ,
     },
     {
       name: "Farm A",
@@ -27,6 +29,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
+      id : '3' ,
     },
     {
       name: "Farm A",
@@ -34,6 +37,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
+      id : '4' ,
     },
   ];
 
@@ -85,8 +89,8 @@ const Services = () => {
             {requests.map((request) => {
               return (
                 <>
-                  <div>
-                    <p>{request.name}</p>
+                  <div >
+                    <p key={request.id}>{request.name}</p>
                     <p>{request.service}</p>
                     <p>{request.date}</p>
                     <p>{request.location}</p>
