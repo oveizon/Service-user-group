@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/Services.module.scss";
+import Navbar from "@/components/Navbar";
 
 interface Requests {
   [key: string]: string;
@@ -13,7 +14,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
-      id : '1' ,
+      id: "1",
     },
     {
       name: "Farm A",
@@ -21,7 +22,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
-      id : '2' ,
+      id: "2",
     },
     {
       name: "Farm A",
@@ -29,7 +30,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
-      id : '3' ,
+      id: "3",
     },
     {
       name: "Farm A",
@@ -37,36 +38,13 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
-      id : '4' ,
+      id: "4",
     },
   ];
 
   return (
     <div className={styles.services}>
-      <nav className={styles.navbar}>
-        <a href="#">
-          <img src="/previous.png" alt="go back" />
-        </a>
-        <div>
-          <a href="#">
-            {" "}
-            <img src="/question.png" alt="chat" />{" "}
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/chat.png" alt="chat" />{" "}
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/notifications.png" alt="notifications" />
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/menu.png" alt="account" />
-          </a>
-        </div>
-      </nav>
-
+      <Navbar />
       <div className={styles.requests}>
         <div className={styles.links}>
           <a href="#">Active Request(20)</a>
@@ -89,7 +67,7 @@ const Services = () => {
             {requests.map((request) => {
               return (
                 <>
-                  <div >
+                  <div>
                     <p key={request.id}>{request.name}</p>
                     <p>{request.service}</p>
                     <p>{request.date}</p>

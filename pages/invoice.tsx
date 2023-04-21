@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "@/styles/Services.module.scss";
 import invoice from "@/styles/Invoice.module.scss";
+import Navbar from "@/components/Navbar";
 
 interface ServiceRend {
   [key: string]: string;
@@ -38,30 +38,8 @@ const ServiceRend = () => {
   ];
 
   return (
-    <div className={styles.services}>
-      <nav className={styles.navbar}>
-        <a href="#">
-          <img src="/previous.png" alt="go back" />
-        </a>
-        <div>
-          <a href="#">
-            {" "}
-            <img src="/question.png" alt="chat" />{" "}
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/chat.png" alt="chat" />{" "}
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/notifications.png" alt="notifications" />
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/menu.png" alt="account" />
-          </a>
-        </div>
-      </nav>
+    <div className={invoice.invoice}>
+      <Navbar />
 
       <div className={invoice.boderline}>
         <div className={invoice.spreadmain}>
@@ -92,7 +70,7 @@ const ServiceRend = () => {
         </div>
 
         <h3>For Service Rendered</h3>
-        <div className={styles.headers}>
+        <div className={invoice.headers}>
           <div>
             <p>SERVICE</p>
             <p>DESCRIPTION</p>
@@ -150,6 +128,12 @@ const ServiceRend = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className={invoice.link}>
+        <a href="#">
+          See All <img src="/forward.png" alt="see all" />{" "}
+        </a>
       </div>
     </div>
   );

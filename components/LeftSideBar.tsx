@@ -2,13 +2,13 @@ import React from "react";
 import styles from "@/styles/LeftSideBar.module.scss";
 import { useRouter } from "next/router";
 
-
 interface List {
   src: string;
   alt: string;
   title: string;
   value: string;
   path: string;
+  id: number;
 }
 
 const LeftSideBar = () => {
@@ -19,6 +19,7 @@ const LeftSideBar = () => {
       title: "Overview",
       value: "",
       path: "/",
+      id: 1,
     },
     {
       src: "/service-request-icon.png",
@@ -26,6 +27,7 @@ const LeftSideBar = () => {
       title: "Service Request",
       value: "100+",
       path: "/services",
+      id: 2,
     },
     {
       src: "/invoice-icon.png",
@@ -33,13 +35,15 @@ const LeftSideBar = () => {
       title: "Invoice",
       value: "",
       path: "/invoice",
+      id: 3,
     },
     {
       src: "/certificate-icon.png",
       alt: "certificate",
-      title: "Certificate",
+      title: "Job Certificate",
       value: "",
       path: "/certificate",
+      id: 4,
     },
     {
       src: "/review-icon.png",
@@ -47,6 +51,7 @@ const LeftSideBar = () => {
       title: "Review",
       value: "",
       path: "/review",
+      id: 5,
     },
   ];
 
@@ -68,6 +73,7 @@ const LeftSideBar = () => {
               list.path === router.asPath ? styles.active : styles.link;
             return (
               <a
+                key={list.id}
                 href={list.path}
                 className={`${styles.list_items} ${className}`}
               >

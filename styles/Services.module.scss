@@ -11,20 +11,6 @@
   padding-right: 2rem;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 2.5rem;
-  padding-bottom: 1rem;
-
-  > div {
-    a:not(:last-child) {
-      margin-right: 1rem;
-    }
-  }
-}
-
 .requests {
   h2 {
     font-size: 1.2rem;

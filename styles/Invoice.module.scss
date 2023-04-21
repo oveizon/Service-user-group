@@ -1,53 +1,96 @@
- @mixin flexlayout() {
-    display: flex;
-    justify-content:space-between;
-    margin: auto;
+@mixin flexlayout() {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
 
- }
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  margin: 10px 0;
+  padding: 15px 10px 15px 0;
+  place-items: center;
+}
+.invoice {
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+}
+.spreadmain {
+  @include flexlayout();
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
- .spreadmain{
-    @include flexlayout();
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-
-    .h1{
-        font-weight: bold;
-    }
- }
-
- .spreadmini{
-    @include flexlayout();
-
-    p{
-        padding:0.6rem
-    }
- }
-
- .spread{
-    @include flexlayout();
-    p{
-        padding:0.6rem
-    };
-    font-size:medium;
- }
-
- .name{
-    color: var(--dark-blue);
+  .h1 {
     font-weight: bold;
- }
+  }
+}
 
- .highlight{
+.spreadmini {
+  @include flexlayout();
+
+  p {
+    padding: 0.6rem;
+  }
+}
+
+.spread {
+  @include flexlayout();
+  p {
+    padding: 0.6rem;
+  }
+  font-size: medium;
+}
+
+.name {
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: var(--secondary-bg-orange);
+  color: var(--primary-white);
+}
+
+.boderline {
+  border: 1px solid var(--light-blue);
+  padding: 2.5rem;
+  margin: 30px;
+  box-shadow: 0 3px 20px var(--light-blue);
+}
+
+.up {
+  margin-bottom: 10rem;
+}
+
+.link {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  img {
+    margin-left: 5px;
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.headers {
+  > div:first-child {
+    @include grid;
     background-color: var(--secondary-bg-orange);
     color: var(--primary-white);
- }
+  }
 
- .boderline{
-    border-width: 20px;
-    box-shadow: 0 3px 10px var(--light-blue);
-    
- }
+  > div:last-child {
+    div {
+      @include grid;
 
- .up{
-    margin-bottom: 10rem;
- }
-
+      p:last-child {
+        img {
+          width: 15px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
