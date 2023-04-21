@@ -1,6 +1,7 @@
 import React from "react";
 import invoice from "@/styles/Invoice.module.scss";
 import Navbar from "@/components/Navbar";
+import Table, { TableHeaders } from "@/components/Table";
 
 interface ServiceRend {
   [key: string]: string;
@@ -70,38 +71,39 @@ const ServiceRend = () => {
         </div>
 
         <h3>For Service Rendered</h3>
-        <div className={invoice.headers}>
-          <div>
-            <p>SERVICE</p>
-            <p>DESCRIPTION</p>
-            <p>QTY</p>
-            <p>UNIT PRICE</p>
-            <p>TOTAL</p>
-          </div>
+        <div>
+          <TableHeaders
+            column1="SERVICE"
+            column2="DESCRIPTION"
+            column3="QTY"
+            column4="UNIT PRICE"
+            column5="TOTAL"
+          />
 
-          <div>
+          <>
             {serviceRend.map((rend) => {
               return (
                 <>
-                  <div>
-                    <p key={rend.id}>{rend.service}</p>
-                    <p>{rend.description}</p>
-                    <p>{rend.quantity}</p>
-                    <p>{rend.unitPrice}</p>
-                    <p>{rend.total}</p>
-                  </div>
-                  <hr />
+                  <Table
+                    key={rend.id}
+                    col1={rend.service}
+                    col2={rend.description}
+                    col3={rend.quantity}
+                    col4={rend.unitPrice}
+                    col5={rend.total}
+                    src=""
+                  />
                 </>
               );
             })}
-          </div>
+          </>
         </div>
 
         <div className={invoice.spreadmain}>
           <div>
             <p>
               Cubeseed provides a secure platform for transactions<br></br>
-              which helps to build a more stable and sustainab<br></br>
+              which helps to build a more stable and sustain<br></br>
               business.
             </p>
           </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/Services.module.scss";
 import Navbar from "@/components/Navbar";
+import Table, { TableHeaders } from "@/components/Table";
 
 interface Requests {
   [key: string]: string;
@@ -54,35 +55,33 @@ const Services = () => {
         </div>
         <h2>Recent Service Request</h2>
 
-        <div className={styles.headers}>
-          <div>
-            <p>NAME</p>
-            <p>SERVICE TYPE</p>
-            <p>DATE</p>
-            <p>LOCATION</p>
-            <p>STATUS</p>
-          </div>
+        <>
+          <TableHeaders
+            column1="NAME"
+            column2="SERVICE TYPE"
+            column3="DATE"
+            column4="LOCATION"
+            column5="STATUS"
+          />
 
-          <div>
+          <>
             {requests.map((request) => {
               return (
                 <>
-                  <div>
-                    <p key={request.id}>{request.name}</p>
-                    <p>{request.service}</p>
-                    <p>{request.date}</p>
-                    <p>{request.location}</p>
-                    <p>
-                      {request.status}{" "}
-                      <img src="/arrow-down.png" alt="down arrow" />{" "}
-                    </p>
-                  </div>
-                  <hr />
+                  <Table
+                    key={request.id}
+                    col1={request.name}
+                    col2={request.service}
+                    col3={request.date}
+                    col4={request.location}
+                    col5={request.status}
+                    src={"/arrow-down.png"}
+                  />
                 </>
               );
             })}
-          </div>
-        </div>
+          </>
+        </>
       </div>
     </div>
   );
