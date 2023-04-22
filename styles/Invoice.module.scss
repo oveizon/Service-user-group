@@ -52,15 +52,3 @@
 .up {
   margin-bottom: 10rem;
 }
-
-.link {
-  margin-top: 1rem;
-  @include flexAlignCenter;
-  justify-content: right;
-
-  img {
-    margin-left: 5px;
-    height: 10px;
-    width: 10px;
-  }
-}

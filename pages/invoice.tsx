@@ -2,7 +2,7 @@ import React from "react";
 import invoice from "@/styles/Invoice.module.scss";
 import Navbar from "@/components/Navbar";
 import Table, { TableHeaders } from "@/components/Table";
-import Link from "next/link";
+import Footer from "@/components/Footer";
 
 interface ServiceRend {
   [key: string]: string;
@@ -13,7 +13,7 @@ const ServiceRend = () => {
     {
       service: "Plowing",
       description:
-        "This added functionality provides the service providerwith easy acces to view",
+        "This added functionality provides the service provider with easy access to view",
       quantity: "2",
       unitPrice: "GHS 150",
       total: "GHS 300",
@@ -22,7 +22,7 @@ const ServiceRend = () => {
     {
       service: "Plowing",
       description:
-        "This added functionality provides the service providerwith easy acces to view",
+        "This added functionality provides the service provider with easy access to view",
       quantity: "2",
       unitPrice: "GHS 150",
       total: "GHS 300",
@@ -31,7 +31,7 @@ const ServiceRend = () => {
     {
       service: "Plowing",
       description:
-        "This added functionality provides the service providerwith easy acces to view",
+        "This added functionality provides the service provider with easy access to view",
       quantity: "2",
       unitPrice: "GHS 150",
       total: "GHS 300",
@@ -133,11 +133,7 @@ const ServiceRend = () => {
         </div>
       </div>
 
-      <div className={invoice.link}>
-        <Link href="#">
-          See All <img src="/forward.png" alt="see all" />{" "}
-        </Link>
-      </div>
+      <Footer />
     </div>
   );
 };

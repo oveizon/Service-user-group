@@ -3,6 +3,7 @@ import review from "@/styles/Review.module.scss";
 import invoice from "@/styles/Invoice.module.scss";
 import Table, { TableHeaders } from "@/components/Table";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 interface Requests {
   [key: string]: string;
@@ -114,11 +115,7 @@ const Review = () => {
           })}
         </div>
       </>
-      <div className={invoice.link}>
-        <Link href="#">
-          See All <img src="/forward.png" alt="see all" />{" "}
-        </Link>
-      </div>
+      <Footer />
     </div>
   );
 };
