@@ -1,22 +1,11 @@
-@mixin flexlayout() {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-}
+@import "_mixins";
 
-@mixin grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(50px, 1fr));
-  margin: 10px 0;
-  padding: 15px 10px 15px 0;
-  place-items: center;
-}
 .invoice {
   padding-right: 2rem;
   padding-bottom: 4rem;
 }
 .spreadmain {
-  @include flexlayout();
+  @include flexlayout;
   padding: 3rem 0;
 
   .h1 {
@@ -25,7 +14,7 @@
 }
 
 .spreadmini {
-  @include flexlayout();
+  @include flexlayout;
 
   p {
     padding: 0.6rem;
@@ -33,7 +22,7 @@
 }
 
 .spread {
-  @include flexlayout();
+  @include flexlayout;
   p {
     padding: 0.6rem;
   }
@@ -66,9 +55,8 @@
 
 .link {
   margin-top: 1rem;
-  display: flex;
+  @include flexAlignCenter;
   justify-content: right;
-  align-items: center;
 
   img {
     margin-left: 5px;

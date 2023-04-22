@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/LeftSideBar.module.scss";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 interface List {
   src: string;
@@ -72,14 +73,14 @@ const LeftSideBar = () => {
             const className =
               list.path === router.asPath ? styles.active : styles.link;
             return (
-              <a
+              <Link
                 key={list.id}
                 href={list.path}
                 className={`${styles.list_items} ${className}`}
               >
                 <img src={list.src} alt={list.alt} /> <p>{list.title}</p>{" "}
                 <span>{list.value}</span>
-              </a>
+              </Link>
             );
           })}
         </ul>
@@ -89,13 +90,13 @@ const LeftSideBar = () => {
 
       <div className={styles.nav_items}>
         <ul>
-          <a href="#" className={`${styles.list_items}`}>
+          <Link href="#" className={`${styles.list_items}`}>
             <img src="/settings-icon.png" alt="settings" /> <p>Settings</p>{" "}
-          </a>
-          <a href="#" className={`${styles.list_items}`}>
+          </Link>
+          <Link href="#" className={`${styles.list_items}`}>
             <img src="/contact_support-icon.png" alt="settings" />{" "}
             <p>Support</p>{" "}
-          </a>
+          </Link>
         </ul>
       </div>
     </nav>

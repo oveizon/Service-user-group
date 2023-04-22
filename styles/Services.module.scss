@@ -1,10 +1,4 @@
-@mixin grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(50px, 1fr));
-  margin: 10px 0;
-  padding: 15px 10px 15px 0;
-  place-items: center;
-}
+@import "_mixins.scss";
 
 // ==================
 .services {
@@ -19,8 +13,7 @@
 }
 
 .links {
-  display: flex;
-  justify-content: space-between;
+  @include flexSpaceBetween;
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1.3rem;

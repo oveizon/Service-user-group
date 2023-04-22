@@ -7,7 +7,12 @@
   --light-blue: #f7fbfe;
   --dark-blue: #03656b;
   --primary-white: #fff;
+
   --border-radius: 8px;
+
+  --very-small-padding: 2px;
+  --very-small-padding: 4px;
+  --medium-padding: 6px;
 }
 
 * {
@@ -27,6 +32,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 ul {
   list-style: none;
 }

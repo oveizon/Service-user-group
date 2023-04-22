@@ -1,3 +1,5 @@
+@import "_mixins";
+
 .home {
   display: grid;
   grid-template-columns: auto 300px;
@@ -5,17 +7,14 @@
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-
+  @include flexAlignCenter;
   padding-top: 2.5rem;
   padding-bottom: 1.5rem;
 }
 
 .service {
-  display: flex;
+  @include flexJustifyCenter;
   flex-direction: column;
-  justify-content: center;
   height: 315px;
   width: 100%;
   padding-left: 2rem;
@@ -41,8 +40,7 @@
   > div:first-child {
     background-color: var(--dark-blue);
     color: var(--primary-white);
-    display: grid;
-    place-items: center;
+    @include gridCenterItems;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -54,8 +52,7 @@
     }
 
     > div {
-      display: flex;
-      justify-content: space-between;
+      @include flexSpaceBetween;
 
       img {
         object-fit: contain;
@@ -91,8 +88,7 @@
       font-weight: 500;
     }
     > div {
-      display: flex;
-      align-items: center;
+      @include flexAlignCenter;
       justify-content: center;
 
       p {
@@ -121,8 +117,7 @@
   height: 100%;
 
   > div {
-    display: flex;
-    align-items: center;
+    @include flexAlignCenter;
     margin-bottom: 1.5rem;
 
     > div {

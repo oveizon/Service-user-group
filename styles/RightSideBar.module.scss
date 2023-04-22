@@ -3,6 +3,20 @@
   padding-right: 20px;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+
+  > div {
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
 .image {
   width: 300px;
   height: 300px;
