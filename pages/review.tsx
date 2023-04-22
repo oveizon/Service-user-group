@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import review from "@/styles/Review.module.scss";
 import invoice from "@/styles/Invoice.module.scss";
 import Table, { TableHeaders } from "@/components/Table";
+import Link from "next/link";
 
 interface Requests {
   [key: string]: string;
@@ -114,9 +115,9 @@ const Review = () => {
         </div>
       </>
       <div className={invoice.link}>
-        <a href="#">
+        <Link href="#">
           See All <img src="/forward.png" alt="see all" />{" "}
-        </a>
+        </Link>
       </div>
     </div>
   );

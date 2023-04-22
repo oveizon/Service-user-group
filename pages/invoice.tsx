@@ -2,6 +2,7 @@ import React from "react";
 import invoice from "@/styles/Invoice.module.scss";
 import Navbar from "@/components/Navbar";
 import Table, { TableHeaders } from "@/components/Table";
+import Link from "next/link";
 
 interface ServiceRend {
   [key: string]: string;
@@ -133,9 +134,9 @@ const ServiceRend = () => {
       </div>
 
       <div className={invoice.link}>
-        <a href="#">
+        <Link href="#">
           See All <img src="/forward.png" alt="see all" />{" "}
-        </a>
+        </Link>
       </div>
     </div>
   );

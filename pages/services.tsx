@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/styles/Services.module.scss";
 import Navbar from "@/components/Navbar";
 import Table, { TableHeaders } from "@/components/Table";
+import Link from "next/link";
 
 interface Requests {
   [key: string]: string;
@@ -48,10 +49,10 @@ const Services = () => {
       <Navbar />
       <div className={styles.requests}>
         <div className={styles.links}>
-          <a href="#">Active Request(20)</a>
-          <a href="#">Purchase Order</a>
-          <a href="#">Service Rendered</a>
-          <a href="#">Cancelled</a>
+          <Link href="#">Active Request(20)</Link>
+          <Link href="#">Purchase Order</Link>
+          <Link href="#">Service Rendered</Link>
+          <Link href="#">Cancelled</Link>
         </div>
         <h2>Recent Service Request</h2>
 
