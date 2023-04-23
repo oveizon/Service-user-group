@@ -1,54 +1,56 @@
-@import "_mixins";
+ @mixin flexlayout() {
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
 
-.invoice {
-  padding-right: 2rem;
-  padding-bottom: 4rem;
-}
-.spreadmain {
-  @include flexlayout;
-  padding: 3rem 0;
+ }
 
-  .h1 {
+ .spreadmain{
+    @include flexlayout();
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    .h1{
+        font-weight: bold;
+    }
+ }
+
+ .spreadmini{
+    @include flexlayout();
+
+    p{
+        padding:0.6rem
+    }
+ }
+
+ .spread{
+    @include flexlayout();
+    p{
+        padding:0.6rem
+    };
+    font-size:medium;
+ }
+
+ .name{
+    color: var(--dark-blue);
     font-weight: bold;
-  }
-}
+ }
 
-.spreadmini {
-  @include flexlayout;
+ .highlight{
+    background-color: var(--secondary-bg-orange);
+    color: var(--primary-white);
+ }
 
-  p {
-    padding: 0.6rem;
-  }
-}
+ .boderline{
+   margin-top: 0rem;
+   margin-bottom: 2rem;
+   border: thick,solid,var(--light-blue);
+   padding: 7rem;
+   padding-top: 0rem;
+   padding-bottom: 0rem;
+ }
 
-.spread {
-  @include flexlayout;
-  p {
-    padding: 0.6rem;
-  }
-  font-size: medium;
-}
+ .up{
+    margin-bottom: 10rem;
+ }
 
-.name {
-  color: var(--dark-blue);
-  font-weight: bold;
-}
-
-.highlight {
-  background-color: var(--secondary-bg-orange);
-  color: var(--primary-white);
-}
-
-.boderline {
-  border: 1px solid var(--light-blue);
-  padding: 0rem 2.5rem;
-
-  margin: 30px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  box-shadow: 0 3px 20px var(--light-blue);
-}
-
-.up {
-  margin-bottom: 10rem;
-}
