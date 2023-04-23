@@ -1,8 +1,6 @@
 import Navbar from "@/components/Navbar";
 import review from "@/styles/Review.module.scss";
-import invoice from "@/styles/Invoice.module.scss";
 import Table, { TableHeaders } from "@/components/Table";
-import Link from "next/link";
 import Footer from "@/components/Footer";
 
 interface Requests {

@@ -90,12 +90,25 @@ const LeftSideBar = () => {
 
       <div className={styles.nav_items}>
         <ul>
-          <Link href="#" className={`${styles.list_items}`}>
+          <Link
+            href="/settings"
+            className={
+              router.asPath == "/settings"
+                ? `${styles.list_items} ${styles.active}`
+                : `${styles.list_items}`
+            }
+          >
             <img src="/settings-icon.png" alt="settings" /> <p>Settings</p>{" "}
           </Link>
-          <Link href="#" className={`${styles.list_items}`}>
-            <img src="/contact_support-icon.png" alt="settings" />{" "}
-            <p>Support</p>{" "}
+          <Link
+            href="/support"
+            className={
+              router.asPath == "/support"
+                ? `${styles.list_items} ${styles.active}`
+                : `${styles.list_items}`
+            }
+          >
+            <img src="/contact_support-icon.png" alt="support" /> <p>Support</p>{" "}
           </Link>
         </ul>
       </div>
