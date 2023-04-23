@@ -93,14 +93,12 @@ const ServiceRend = () => {
            </div>
 
            <h3>For Service Rendered</h3>
-          <div className={styles.headers}>
+           <div className={styles.headers}>
               <div>
                <p>SERVICE</p>
                <p>DESCRIPTION</p>
                <p>QTY</p>
-               <pre>UNIT 
-                    PRICE
-                </pre>
+               <p>UNIT PRICE</p>
                <p>TOTAL</p>
              </div>
 
@@ -151,7 +149,7 @@ const ServiceRend = () => {
                   <hr />
                 </div>
              </div>  
-          </div>
+           </div>
          </div>
      </div>
     )

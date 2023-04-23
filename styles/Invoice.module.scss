@@ -42,9 +42,14 @@
  }
 
  .boderline{
-    border-width: 20px;
-    box-shadow: 0 3px 10px var(--light-blue);
-    
+   margin-top: 0rem;
+   margin-bottom: 2rem;
+   border: thick,solid,var(--light-blue);
+   padding: 7rem;
+   padding-top: 0rem;
+   padding-bottom: 0rem;
+
+
  }
 
  .up{
