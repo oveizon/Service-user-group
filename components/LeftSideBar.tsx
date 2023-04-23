@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/LeftSideBar.module.scss";
 import { useRouter } from "next/router";
-import { link } from "fs";
+import Link from "next/link";
 
 interface List {
   src: string;
@@ -9,6 +9,7 @@ interface List {
   title: string;
   value: string;
   path: string;
+  id: number;
 }
 
 const LeftSideBar = () => {
@@ -18,7 +19,8 @@ const LeftSideBar = () => {
       alt: "overview",
       title: "Overview",
       value: "",
-      path: "/home",
+      path: "/",
+      id: 1,
     },
     {
       src: "/service-request-icon.png",
@@ -26,6 +28,7 @@ const LeftSideBar = () => {
       title: "Service Request",
       value: "100+",
       path: "/services",
+      id: 2,
     },
     {
       src: "/invoice-icon.png",
@@ -33,20 +36,23 @@ const LeftSideBar = () => {
       title: "Invoice",
       value: "",
       path: "/invoice",
+      id: 3,
     },
     {
       src: "/certificate-icon.png",
       alt: "certificate",
-      title: "Certificate",
+      title: "Job Certificate",
       value: "",
-      path: "/",
+      path: "/certificate",
+      id: 4,
     },
     {
       src: "/review-icon.png",
       alt: "review",
       title: "Review",
       value: "",
-      path: "/",
+      path: "/review",
+      id: 5,
     },
   ];
 
@@ -67,13 +73,14 @@ const LeftSideBar = () => {
             const className =
               list.path === router.asPath ? styles.active : styles.link;
             return (
-              <a
+              <Link
+                key={list.id}
                 href={list.path}
                 className={`${styles.list_items} ${className}`}
               >
                 <img src={list.src} alt={list.alt} /> <p>{list.title}</p>{" "}
                 <span>{list.value}</span>
-              </a>
+              </Link>
             );
           })}
         </ul>
@@ -83,13 +90,13 @@ const LeftSideBar = () => {
 
       <div className={styles.nav_items}>
         <ul>
-          <a href="#" className={`${styles.list_items}`}>
+          <Link href="#" className={`${styles.list_items}`}>
             <img src="/settings-icon.png" alt="settings" /> <p>Settings</p>{" "}
-          </a>
-          <a href="#" className={`${styles.list_items}`}>
+          </Link>
+          <Link href="#" className={`${styles.list_items}`}>
             <img src="/contact_support-icon.png" alt="settings" />{" "}
             <p>Support</p>{" "}
-          </a>
+          </Link>
         </ul>
       </div>
     </nav>

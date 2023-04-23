@@ -1,0 +1,38 @@
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexJustifyCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin gridCenterItems {
+  display: grid;
+  place-items: center;
+}
+
+@mixin flexlayout {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  margin: 10px 0;
+  padding: 15px 10px 15px 0;
+  place-items: center;
+}

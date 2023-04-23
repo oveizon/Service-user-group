@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "@/styles/Services.module.scss";
+import Navbar from "@/components/Navbar";
+import Table, { TableHeaders } from "@/components/Table";
+import Link from "next/link";
 
 interface Requests {
   [key: string]: string;
@@ -13,7 +16,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
-      id : '1' ,
+      id: "1",
     },
     {
       name: "Farm A",
@@ -21,7 +24,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
-      id : '2' ,
+      id: "2",
     },
     {
       name: "Farm A",
@@ -29,7 +32,7 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
-      id : '3' ,
+      id: "3",
     },
     {
       name: "Farm A",
@@ -37,74 +40,49 @@ const Services = () => {
       date: "2021-04-20",
       location: "accra, ghana",
       status: "Pending",
-      id : '4' ,
+      id: "4",
     },
   ];
 
   return (
     <div className={styles.services}>
-      <nav className={styles.navbar}>
-        <a href="#">
-          <img src="/previous.png" alt="go back" />
-        </a>
-        <div>
-          <a href="#">
-            {" "}
-            <img src="/question.png" alt="chat" />{" "}
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/chat.png" alt="chat" />{" "}
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/notifications.png" alt="notifications" />
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/menu.png" alt="account" />
-          </a>
-        </div>
-      </nav>
-
+      <Navbar />
       <div className={styles.requests}>
         <div className={styles.links}>
-          <a href="#">Active Request(20)</a>
-          <a href="#">Purchase Order</a>
-          <a href="#">Service Rendered</a>
-          <a href="#">Cancelled</a>
+          <Link href="#">Active Request(20)</Link>
+          <Link href="#">Purchase Order</Link>
+          <Link href="#">Service Rendered</Link>
+          <Link href="#">Cancelled</Link>
         </div>
         <h2>Recent Service Request</h2>
 
-        <div className={styles.headers}>
-          <div>
-            <p>NAME</p>
-            <p>SERVICE TYPE</p>
-            <p>DATE</p>
-            <p>LOCATION</p>
-            <p>STATUS</p>
-          </div>
+        <>
+          <TableHeaders
+            column1="NAME"
+            column2="SERVICE TYPE"
+            column3="DATE"
+            column4="LOCATION"
+            column5="STATUS"
+          />
 
-          <div>
+          <>
             {requests.map((request) => {
               return (
                 <>
-                  <div >
-                    <p key={request.id}>{request.name}</p>
-                    <p>{request.service}</p>
-                    <p>{request.date}</p>
-                    <p>{request.location}</p>
-                    <p>
-                      {request.status}{" "}
-                      <img src="/arrow-down.png" alt="down arrow" />{" "}
-                    </p>
-                  </div>
-                  <hr />
+                  <Table
+                    key={request.id}
+                    col1={request.name}
+                    col2={request.service}
+                    col3={request.date}
+                    col4={request.location}
+                    col5={request.status}
+                    src={"/arrow-down.png"}
+                  />
                 </>
               );
             })}
-          </div>
-        </div>
+          </>
+        </>
       </div>
     </div>
   );
