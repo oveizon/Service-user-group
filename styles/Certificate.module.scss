@@ -1,34 +1,35 @@
-
-
-.box{
-    display: block;
-    background-color: rgb(64, 155, 132);
-    color: var(--primary-white);
-    padding: 1rem;
-    margin: 0rem;
-    margin-left: 10rem;
-    margin-top: 3rem;
-    border-radius: 1rem 1rem;
-    align-items: center;
-    width: 60%;
-    height:fit-content;
+.cert {
+  padding: 0 2rem;
+}
+.box {
+  display: block;
+  background-color: rgb(64, 155, 132);
+  color: var(--primary-white);
+  padding: 1rem;
+  margin: 0rem;
+  margin-left: 10rem;
+  margin-top: 3rem;
+  border-radius: 1rem 1rem;
+  align-items: center;
+  width: 60%;
+  height: fit-content;
 }
 
-.flex{
-    display: flex;
-    margin: auto;
+.flex {
+  display: flex;
+  margin: auto;
 }
-.click{
-    padding: 5rem;
-    border-color: var(--primary-white);
-    border: 1px;
-}
-
-.tic{
-    color: rgb(78, 155, 145);
+.click {
+  padding: 5rem;
+  border-color: var(--primary-white);
+  border: 1px;
 }
 
-.tics{
-    color: rgb(21, 105, 94);
-    font-weight: bolder;
+.tic {
+  color: rgb(78, 155, 145);
+}
+
+.tics {
+  color: rgb(21, 105, 94);
+  font-weight: bolder;
 }

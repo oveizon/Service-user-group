@@ -1,56 +1,55 @@
- @mixin flexlayout() {
-    display: flex;
-    justify-content:space-between;
-    margin: auto;
+@import "_mixins.scss";
 
- }
+.invoice {
+  padding: 2rem;
+  padding-top: 0rem;
+}
 
- .spreadmain{
-    @include flexlayout();
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+.spreadmain {
+  @include flexlayout;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
-    .h1{
-        font-weight: bold;
-    }
- }
-
- .spreadmini{
-    @include flexlayout();
-
-    p{
-        padding:0.6rem
-    }
- }
-
- .spread{
-    @include flexlayout();
-    p{
-        padding:0.6rem
-    };
-    font-size:medium;
- }
-
- .name{
-    color: var(--dark-blue);
+  .h1 {
     font-weight: bold;
- }
+  }
+}
 
- .highlight{
-    background-color: var(--secondary-bg-orange);
-    color: var(--primary-white);
- }
+.spreadmini {
+  @include flexlayout;
 
- .boderline{
-   margin-top: 0rem;
-   margin-bottom: 2rem;
-   border: thick,solid,var(--light-blue);
-   padding: 7rem;
-   padding-top: 0rem;
-   padding-bottom: 0rem;
- }
+  p {
+    padding: 0.6rem;
+  }
+}
 
- .up{
-    margin-bottom: 10rem;
- }
+.spread {
+  @include flexlayout;
+  p {
+    padding: 0.6rem;
+  }
+  font-size: medium;
+}
 
+.name {
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: var(--secondary-bg-orange);
+  color: var(--primary-white);
+}
+
+.boderline {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  border: thick, solid, var(--light-blue);
+  padding: 7rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.up {
+  margin-bottom: 10rem;
+}
