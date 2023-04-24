@@ -56,9 +56,15 @@ const Overview = () => {
     <div className={styles.home}>
       <div className={styles.details}>
         <div className={styles.navbar}>
-          <a href="#">
-            <img src="/previous.png" alt="go back" />
-          </a>
+          <form action="#" className={styles.form}>
+            <button>
+              <img src="/overview-icon.png" alt="menu" />
+            </button>
+            <input type="text" placeholder="Hinted Search Text" />
+            <button type="submit">
+              <img src="/search-icon.png" alt="search button" />
+            </button>
+          </form>
         </div>
         <div className={styles.service}>
           <h2>Service Summary</h2>

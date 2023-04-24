@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "_mixins.scss";
 
 .box{
@@ -24,14 +25,48 @@
     padding: 5rem;
     border: 1rem solid var(--primary-white);
     width: max-content;
+=======
+.cert {
+  padding: 0 2rem;
+}
+.box {
+  display: block;
+  background-color: rgb(64, 155, 132);
+  color: var(--primary-white);
+  padding: 1rem;
+  margin: 0rem;
+  margin-left: 10rem;
+  margin-top: 3rem;
+  border-radius: 1rem 1rem;
+  align-items: center;
+  width: 60%;
+  height: fit-content;
 }
 
-.tic{
-    color: rgb(78, 155, 145);
+.flex {
+  display: flex;
+  margin: auto;
+}
+.click {
+  padding: 5rem;
+  border-color: var(--primary-white);
+  border: 1px;
+>>>>>>> e2a9665dbf87a0b96ee45ebd1960e420505a82ab
 }
 
+.tic {
+  color: rgb(78, 155, 145);
+}
+
+<<<<<<< HEAD
 .tics{
     color: rgb(21, 105, 94);
     font-weight: bolder;
 }
 
+=======
+.tics {
+  color: rgb(21, 105, 94);
+  font-weight: bolder;
+}
+>>>>>>> e2a9665dbf87a0b96ee45ebd1960e420505a82ab

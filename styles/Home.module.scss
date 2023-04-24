@@ -12,6 +12,40 @@
   padding-bottom: 1.5rem;
 }
 
+.form {
+  @include flexAlignCenter;
+  position: relative;
+
+  > button:first-child {
+    outline: none;
+    border: none;
+    background: none;
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+    left: 20px;
+  }
+
+  input {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px 50px 20px 45px;
+    position: relative;
+    border-radius: 28px;
+    border: 1px solid var(--dark-blue);
+  }
+
+  button:last-child {
+    outline: none;
+    border: none;
+    background: none;
+
+    position: absolute;
+    top: 40%;
+    right: 20px;
+  }
+}
+
 .service {
   @include flexJustifyCenter;
   flex-direction: column;
