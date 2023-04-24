@@ -40,7 +40,7 @@ const JobCert = () => {
 
 
     return(
-        <>
+        <div>
            <Navbar />
           {certificate.map(cert => { 
             return (
@@ -57,7 +57,7 @@ const JobCert = () => {
                 </div>
         )})}
         <Footer />
-        </>  
+        </div>  
     );
 }
 export default JobCert;

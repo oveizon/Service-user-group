@@ -1,27 +1,29 @@
-
+@import "_mixins.scss";
 
 .box{
+    
     display: block;
-    background-color: rgb(64, 155, 132);
+    background-color: #57A188;
     color: var(--primary-white);
     padding: 1rem;
     margin: 0rem;
     margin-left: 10rem;
     margin-top: 3rem;
     border-radius: 1rem 1rem;
-    align-items: center;
     width: 60%;
     height:fit-content;
+
 }
 
 .flex{
     display: flex;
     margin: auto;
+    justify-content: space-between;
 }
 .click{
     padding: 5rem;
-    border-color: var(--primary-white);
-    border: 1px;
+    border: 1rem solid var(--primary-white);
+    width: max-content;
 }
 
 .tic{
@@ -32,3 +34,4 @@
     color: rgb(21, 105, 94);
     font-weight: bolder;
 }
+
