@@ -49,12 +49,11 @@ const Services = () => {
       <Navbar />
       <div className={styles.requests}>
         <div className={styles.links}>
-          <Link href="#">Active Request(20)</Link>
+          <Link href="#" className={styles.active}>Active Request(20)</Link>
           <Link href="#">Purchase Order</Link>
           <Link href="#">Service Rendered</Link>
           <Link href="#">Cancelled</Link>
         </div>
-        <h2>Recent Service Request</h2>
 
         <>
           <TableHeaders

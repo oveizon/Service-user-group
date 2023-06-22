@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/RightSideBar.module.scss";
+import styles from "@/styles/component_style/RightSideBar.module.scss";
 
 
 interface Articles {

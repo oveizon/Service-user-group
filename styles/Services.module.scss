@@ -3,12 +3,26 @@
 // ==================
 .services {
   padding-right: 2rem;
+  @include max-width(xsmall){
+    width: 100%;
+    font-size: 80%;
+    //padding-right: 3px;
+  }
 }
 
 .requests {
   h2 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+  }
+
+  @include max-width(small){
+    width: fit-content;
+    h2 {
+      font-size: 8px;
+      margin-bottom: 1rem;
+      padding: 3px;
+    }
   }
 }
 
@@ -17,6 +31,16 @@
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1.3rem;
+  @include max-width(small){
+    width: 100%;
+    font-size: 80%;
+    //padding-right: 3px;
+  }
+  
+}
+
+.active{
+  color: #047e85;
 }
 
 .headers {

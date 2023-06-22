@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/LeftSideBar.module.scss";
+import styles from "@/styles/component_style/LeftSideBar.module.scss";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -49,14 +49,39 @@ const LeftSideBar = () => {
     {
       src: "/review-icon.png",
       alt: "review",
-      title: "Review",
+      title: "operationss",
       value: "",
-      path: "/review",
+      path: "/Operations",
       id: 5,
+    },
+    {
+      src: "/review-icon.png",
+      alt: "review",
+      title: "addservice",
+      value: "",
+      path: "/add_service",
+      id: 6,
+    },
+    {
+      src: "/review-icon.png",
+      alt: "review",
+      title: "createinvoice",
+      value: "",
+      path: "/createInvoice",
+      id: 7,
+    },
+    {
+      src: "/review-icon.png",
+      alt: "review",
+      title: "profile",
+      value: "",
+      path: "/profile",
+      id: 7,
     },
   ];
 
   const router = useRouter();
+
   return (
     <nav className={styles.nav}>
       <div>

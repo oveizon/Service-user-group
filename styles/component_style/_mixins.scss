@@ -45,11 +45,6 @@ $breakpoint-extra-large: 1024px;
   justify-content: center;
 }
 
-@mixin flexSpaceBetween {
-  display: flex;
-  justify-content: space-between;
-}
-
 @mixin gridCenterItems {
   display: grid;
   place-items: center;

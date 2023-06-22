@@ -11,4 +11,14 @@
       margin-right: 1rem;
     }
   }
+  @include max-width(medium){
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  @include max-width(small){
+    padding-top: 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  
+  }
 }

@@ -1,15 +1,16 @@
 import { ReactNode } from "react";
-import styles from "../styles/Layout.module.scss";
+import styles from "../styles/component_style/Layout.module.scss";
 
 import LeftSideBar from "./LeftSideBar";
-import Modal from "./Modal";
+import Invoice from "./ModalInvoice";
+import ModalOps from "./ModalOps";
 
 type LayoutProps = { children?: ReactNode };
 
 export default function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.container}>
-      {/* <Modal /> */}
+      {/* <ModalOps />*/}
       <LeftSideBar />
       {children}
     </div>

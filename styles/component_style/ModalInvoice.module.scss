@@ -1,0 +1,82 @@
+
+@import "_mixins.scss";
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  //background: rgba(217, 217, 217, 0.11);
+  // Note: backdrop-filter has minimal browser support //
+  backdrop-filter: blur(5px);
+  @include gridCenterItems;
+
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 68px 95px 171px;
+    // gap: 10px;
+    //position: absolute;
+    width: 534.9px;
+    height: 300px;
+    background: whitesmoke;
+    border-radius: 20px;
+    }
+
+  h2 {
+      width: 257px;
+      height: 48px;
+      font-family: 'Rosario';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 48px;
+      //display: flex;
+      //align-items: center;
+
+      color: #000000;
+      margin:auto;
+      text-align: center;
+
+  }
+
+  p {
+      width: 448px;
+      height: 30px;
+      font-family: 'Rosario';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10%;
+      margin-left: -10%;
+      margin-bottom: 10%;
+      color: #000000;
+      
+  }
+
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px 36px;
+    width: fit-content;
+    height: 56px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #FCCA45;
+    margin: auto;
+    font-weight: bold;
+    font-size: 23px;
+    border: none;
+    //]position: relative;
+    //left: 50%;
+    //top: 10%;
+    }
+
+}

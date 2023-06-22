@@ -7,6 +7,11 @@
 .position{
     padding-top: 8rem;
     padding-bottom: 6rem;
+    @include max-width(large){
+      //margin: auto;
+      width: 100%;
+    }
+    
 }
 
 .box {
@@ -18,12 +23,38 @@
   margin-top: 2rem;
   border-radius: 1rem 1rem;
   width: 60%;
+  @include max-width(large){
+    //width: 100%;
+    margin-left: 4rem;
+    margin-right: 20rem;
+
+  }
+  @include max-width(medium){
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 15rem;
+
+  }
+  @include max-width(small){
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 5rem;
+
+  }
+  @include max-width(xsmall){
+    width: 100%;
+    margin-left: 8%;
+    margin-right: 25%;
+
+  }
 }
 
 .flex {
   @include flexlayout;
+  //align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  
   
   //justify-content:left;
 }
@@ -38,11 +69,32 @@
   border: 1px solid var(--primary-white);
   width: 13rem;
   height:3.5rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
   h2{
     padding: 1rem;
     font-weight: normal;
+  }
+  @include max-width(large){
+    width: 6rem;
+    height:3rem;
+    margin-top: 5%;
+    h2{
+      font-size: medium;
+      
+    }
+  }
+  
+  @include max-width(small){
+    width: 5rem;
+    height:2.5rem;
+    h2{
+      font-size: small;
+      
+    }
+    margin-top: 10%;
   }
   
 }

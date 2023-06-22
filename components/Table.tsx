@@ -1,5 +1,5 @@
 import React from "react";
-import Tables from "@/styles/Table.module.scss";
+import Tables from "@/styles/component_style/Table.module.scss";
 
 type PropObj = {
   key: string;

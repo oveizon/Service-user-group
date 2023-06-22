@@ -10,4 +10,7 @@
     height: 10px;
     width: 10px;
   }
+  @include max-width(medium){
+    display: none;
+  }
 }

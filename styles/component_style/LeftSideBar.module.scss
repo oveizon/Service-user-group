@@ -5,6 +5,10 @@
   min-height: 100vh;
   background-color: var(--light-blue);
   padding: 10px;
+  @include max-width(large) {
+    display: none;
+}
+  
 
   hr {
     margin-top: 6rem;
